@@ -38,8 +38,8 @@ public class AutomationTask {
     @Test(priority = 2)
     public void register() throws InterruptedException {
 
-        WebElement signupButton = driver.findElement(By.id("signin2"));
-        signupButton.click();
+        WebElement signupHeader = driver.findElement(By.id("signin2"));
+        signupHeader.click();
         Thread.sleep(5000);
 
         WebElement username = driver.findElement(By.id("sign-username"));
@@ -48,15 +48,20 @@ public class AutomationTask {
         username.sendKeys(randomUsername);
         password.sendKeys("12345678");
 
-        Thread.sleep(5000);
-        password.submit();
+        Thread.sleep(3000);
+        WebElement signupButton = driver.findElement(By.xpath("//button[@class='btn btn-primary' and text()='Sign up']"));
+        signupButton.click();
+        Thread.sleep(2000);
+        // accept alert dialog
+        driver.switchTo().alert().accept();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 3)
     public void login() throws InterruptedException {
-        WebElement loginButton = driver.findElement(By.id("login2"));
-        loginButton.click();
-        Thread.sleep(5000);
+        WebElement loginHeader = driver.findElement(By.id("login2"));
+        loginHeader.click();
+        Thread.sleep(3000);
 
         WebElement username = driver.findElement(By.id("loginusername"));
         WebElement password = driver.findElement(By.id("loginpassword"));
@@ -64,9 +69,10 @@ public class AutomationTask {
         username.sendKeys(randomUsername);
         password.sendKeys("12345678");
 
-        Thread.sleep(5000);
-        password.submit();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+        WebElement loginButton = driver.findElement(By.xpath("//button[@class='btn btn-primary' and text()='Log in']"));
+        loginButton.click();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 4)
