@@ -10,6 +10,7 @@ import java.util.List;
 public class CategoriesPage {
     WebDriver driver;
 
+
     public CategoriesPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
