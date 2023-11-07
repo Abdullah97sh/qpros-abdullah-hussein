@@ -17,22 +17,22 @@ public class AutomationTask extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void login() {
+    public void login() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.clickUsernameHeader()
                 .fillUsernameTextBox(randomUsername)
                 .fillPasswordTextBox("12345678")
                 .clickLoginButton();
+        Thread.sleep(1500);
     }
 
     @Test(priority = 3)
     public void checkCategories() throws InterruptedException {
 
         CategoriesPage categoriesPage = new CategoriesPage(driver);
-
-        categoriesPage.checkCategoriesItems()
-                .toHome();
+        categoriesPage.checkCategoriesItems();
+        categoriesPage.toHome();
     }
 
 

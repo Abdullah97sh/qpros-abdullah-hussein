@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     public WebDriver driver;
-    public String randomUsername = "abdullah1-" + ((int) (Math.random() * 20)) + "@qpros.com";
+    public String randomUsername = "abdullah-2" + ((int) (Math.random() * 90)) + "@qpros.com";
 
 
     // anything will add under @BeforeTest will run onr time before all test cases
