@@ -24,7 +24,9 @@ This GitHub repository contains the solution to an assessment for UI Automation 
 - Git / GitHub
 
 ## Script Execution Record:
-https://github.com/Abdullah97sh/qpros-abdullah-hussein/assets/60435952/2d8ac38e-a260-4214-8945-402c4ecc02a9
+https://github.com/Abdullah97sh/qpros-abdullah-hussein/assets/60435952/8f703693-3b8c-47e6-80c1-8944f787ad1d
+
+
 
 
 
